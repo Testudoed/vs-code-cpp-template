@@ -1,0 +1,7 @@
+[
+    {
+        "name": "mingw-x86_64",
+        "vendor": "mingw",
+        "toolchainFile": "${workspaceFolder}/cmake/Windows.cmake" 
+    }
+]

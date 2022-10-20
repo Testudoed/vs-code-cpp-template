@@ -1,0 +1,44 @@
+// Useful configuration documentation:
+// * https://code.visualstudio.com/docs/remote/devcontainerjson-reference
+// * https://code.visualstudio.com/docs/remote/create-dev-container
+// * https://code.visualstudio.com/docs/remote/containers-advanced
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "cmake.configureOnOpen": true,
+    "cmake.buildDirectory": "${workspaceFolder}/build/${buildKit}/${buildType}",
+    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+    "clangd.path": "clangd-12",
+    "C_Cpp.intelliSenseEngine": "Disabled",
+    "cSpell.allowCompoundWords": true,
+    "cSpell.enableFiletypes": ["shellscript"],
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.profiles.linux": {
+      "bash": {
+        "path": "bash",
+        "icon": "terminal-bash"
+      }
+    },
+    "testMate.cpp.test.executables": "${command:cmake.buildDirectory}/**/*{test,Test,TEST}*"
+  },
+  "extensions": [
+    "ms-vscode.cpptools",
+    "twxs.cmake",
+    "ms-vscode.cmake-tools",
+    "streetsidesoftware.code-spell-checker",
+    "timonwong.shellcheck",
+    "llvm-vs-code-extensions.vscode-clangd",
+    "matepek.vscode-catch2-test-adapter",
+    "eamodio.gitlens",
+    "amiralizadeh9480.cpp-helper",
+    "hars.CppSnippets"
+  ],
+  "remoteEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}",
+    "LIBGL_ALWAYS_INDIRECT": "1"
+  }
+}

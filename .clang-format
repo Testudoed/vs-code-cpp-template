@@ -1,0 +1,55 @@
+---
+BasedOnStyle: Google
+AccessModifierOffset: -4
+AlignAfterOpenBracket: AlwaysBreak
+AlignOperands: AlignAfterOperator
+AllowAllConstructorInitializersOnNextLine: false
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortLambdasOnASingleLine: Inline
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeBraces: Allman
+BreakConstructorInitializers: AfterColon
+BreakInheritanceList: AfterColon
+ColumnLimit: 100
+ContinuationIndentWidth: 8
+DerivePointerAlignment: false
+SortIncludes : true
+IncludeCategories:
+  - Regex:           '^"ui_.*'
+    Priority:        0
+    SortPriority:    1
+  - Regex:           '^<.*\.h>'
+    Priority:        2
+    SortPriority:    0
+  - Regex:           '^<Q[A-Z].*>'
+    CaseSensitive:   true
+    Priority:        5
+    SortPriority:    0
+  - Regex:           '^<.*>'
+    Priority:        1
+    SortPriority:    0
+  - Regex:           '^".*"'
+    Priority:        50
+    SortPriority:    0
+IncludeIsMainRegex: '((test|unittest))?$'
+IndentGotoLabels: false
+IndentWidth: 4
+PenaltyBreakAssignment: 10
+PenaltyBreakBeforeFirstCallParameter: 30
+PenaltyBreakComment: 300
+PenaltyBreakFirstLessLess: 120
+PenaltyBreakString: 1000
+PenaltyBreakTemplateDeclaration: 10
+PenaltyExcessCharacter: 1000000
+PenaltyIndentedWhitespace: 10
+PenaltyReturnTypeOnItsOwnLine: 200
+SpaceAfterTemplateKeyword: false
+SpaceBeforeCpp11BracedList: true
+SpaceBeforeCtorInitializerColon: false
+SpaceBeforeInheritanceColon: false
+SpaceBeforeParens: Never
+SpacesBeforeTrailingComments: 1
+SpacesInContainerLiterals: false
+TabWidth: 4
+...
